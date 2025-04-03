@@ -30,7 +30,6 @@ const InvestmentForm = ({data}: {data?: InvestmentFormType}) => {
     });
 
     const onFormSubmit = handleSubmit(async (formData) => {
-        console.log(formData);
         try {
             const parsedAmount = parseFormattedAmount(formData.amount);
 
@@ -51,7 +50,6 @@ const InvestmentForm = ({data}: {data?: InvestmentFormType}) => {
                     allocation: formData.allocation
                 };
     
-                console.log(updatedInvestmentData);
                 updateGeneralData({ ...currentData, currentInvestmentsTab: 'List', investments: [...currentData.investments, updatedInvestmentData] });
                 showToast('Investment has been made successfully!');
             } else {

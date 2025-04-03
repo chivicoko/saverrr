@@ -89,9 +89,7 @@ const Transactions = () => {
      
     setIsLoading(false);
   };
-  
-  console.log(currentData);
-  
+    
   if (isLoading) {
     return <Loading/>;
   };

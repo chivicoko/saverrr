@@ -57,7 +57,6 @@ export const GeneralDataProvider = ({ children }: { children: ReactNode }) => {
     // };
     
   }, [pathName, router]);
-  // console.log(currentData);
   
   const updateGeneralData = (data: GeneralDataProps) => {
     setCurrentData(data);

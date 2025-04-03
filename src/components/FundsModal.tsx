@@ -52,7 +52,6 @@ const FundsModal = ({ data, handleModalToggle, whichModal }: FundsProps) => {
                         ...formData,
                         amount: parsedAmount.toString(),
                     };
-                    // console.log(updatedFormData);
     
                     const updatedBalance = currentData.NGNBalance + parseInt(updatedFormData.amount);
                     updateGeneralData({ ...currentData, currentTransactionsTab: 'Invest', NGNBalance: updatedBalance });
