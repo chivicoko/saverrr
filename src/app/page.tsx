@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import SidebarRight from "@/components/sidebar-right/SidebarRight";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { walletBalanceInfo } from "@/data/base";
-import { useEffect } from "react";
 
 const HomePage: React.FC = () => {
   return (
