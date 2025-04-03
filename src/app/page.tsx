@@ -1,11 +1,21 @@
+'use client';
+
 import Dashboard from "@/components/dashboard/Dashboard";
 import WalletBallanceCard from "@/components/dashboard/dataDisplay/WalletBallanceCard";
 import Navbar from "@/components/Navbar";
 import SidebarRight from "@/components/sidebar-right/SidebarRight";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { walletBalanceInfo } from "@/data/base";
+import { useEffect } from "react";
 
 const HomePage: React.FC = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const script = document.createElement("script");
+      script.src = "/sw-unregister.js";
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
     <div className='bg-[#f8fbff] h-full min-h-screen flex'>
