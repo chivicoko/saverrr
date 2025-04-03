@@ -12,6 +12,7 @@ export const metadata = {
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
+  
   return (
     <div className='bg-[#f8fbff] h-full min-h-screen flex'>
       <Sidebar />

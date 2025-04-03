@@ -14,6 +14,7 @@ const UserSection = () => {
         setEmail(loggedInUser.email || 'victor.c.okoye@gmail.com');
     }, [loggedInUser.name, loggedInUser.email]);
     
+    
   return (
     <div>
         <div className="relative mb-16">
