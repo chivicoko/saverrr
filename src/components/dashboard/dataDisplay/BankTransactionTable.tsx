@@ -16,16 +16,16 @@ const BankTransactionTable = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 430 && !isExpanded) {
+      if (window.innerWidth <= 430) {
         setTransactionsPerPage(3);
-      } else if (window.innerWidth <= 640 && !isExpanded) {
+      } else if (window.innerWidth <= 640) {
         setTransactionsPerPage(5);
       } else {
-        if (window.innerHeight <= 731 && !isExpanded) {
+        if (window.innerHeight <= 731) {
           setTransactionsPerPage(3);
-        } else if (window.innerHeight <= 810 && !isExpanded) {
+        } else if (window.innerHeight <= 810) {
           setTransactionsPerPage(4);
-        } else if (window.innerHeight <= 1180 && !isExpanded) {
+        } else if (window.innerHeight <= 1180) {
           setTransactionsPerPage(7);
         // } else if (window.innerHeight <= 1085) {
         //   setTransactionsPerPage(8)
@@ -34,6 +34,10 @@ const BankTransactionTable = () => {
         }  else {
           setTransactionsPerPage(13);
         }
+      }
+
+      if (isExpanded) {
+        setTransactionsPerPage(6);
       }
     };
 
@@ -69,10 +73,6 @@ const BankTransactionTable = () => {
 
   const toggleChartExpansion = () => {
     setIsExpanded((prev) => !prev);
-    
-    if (isExpanded) {
-      setTransactionsPerPage(7);
-    }
   };
 
   return (
